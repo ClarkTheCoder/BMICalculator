@@ -43,14 +43,15 @@ class ViewController: UIViewController {
         let BMI = weight / pow(heightInInches, 2) * 703
         
         print(Int(BMI))
-        
-        // create second view controller from SecondViewController class and display
-        // it when button is clicked 
-        let secondVC = SecondViewController()
-        
-        // create property in secondVC class called BMI value and assign it to BMI value within this instance
-        secondVC.bmiValue = String(format: "%.1f", BMI)
-        self.present(secondVC, animated: true, completion: nil)
+//        
+//        create second view controller from SecondViewController class and display
+//        it when button is clicked
+//        let secondVC = SecondViewController()
+//        
+//        // create property in secondVC class called BMI value
+          // and assign it to BMI value within this instance
+//        secondVC.bmiValue = String(format: "%.1f", BMI)
+//        self.present(secondVC, animated: true, completion: nil)
         
     }
     
