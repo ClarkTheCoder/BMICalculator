@@ -9,6 +9,8 @@
 import UIKit
 
 class CalculateViewController: UIViewController {
+    
+    var bmiValue = "0.0"
 
     @IBOutlet weak var heightLabel: UILabel!
     @IBOutlet weak var weightLabel: UILabel!
@@ -42,8 +44,8 @@ class CalculateViewController: UIViewController {
         
         let BMI = weight / pow(heightInInches, 2) * 703
         
-        print(Int(BMI))
-//        
+        bmiValue = String(format: "%.1f", BMI)
+//
 //        create second view controller from SecondViewController class and display
 //        it when button is clicked
 //        let secondVC = SecondViewController()
@@ -54,7 +56,14 @@ class CalculateViewController: UIViewController {
 //        self.present(secondVC, animated: true, completion: nil)
         
         self.performSegue(withIdentifier: "goToResult", sender: self)
-        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToResult" {
+            // as! is used for forced downcasting (taking UIViewController and downcasting it to ResultsViewController
+            let destinationVC = segue.destination as! ResultsViewController
+            destinationVC.bmiValue = bmiValue
+        }
     }
     
 }
