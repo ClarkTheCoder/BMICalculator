@@ -3,7 +3,7 @@
 //  BMI Calculator
 //
 //  Created by Carson Clark on 2023-11-26.
-//  Copyright © 2023 Angela Yu. All rights reserved.
+//
 //
 
 import UIKit
@@ -11,12 +11,15 @@ import UIKit
 class ResultsViewController: UIViewController {
 
     var bmiValue: String?
+    var adviceValue: String?
     
+    @IBOutlet weak var bmiLabel: UILabel!
+    @IBOutlet weak var adviceLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        bmiLabel.text = bmiValue
+        adviceLabel.text = adviceValue
     }
     
 
