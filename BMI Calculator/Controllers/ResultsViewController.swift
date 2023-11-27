@@ -10,6 +10,10 @@ import UIKit
 
 class ResultsViewController: UIViewController {
 
+    @IBOutlet weak var bmiLabel: UILabel!
+    @IBOutlet weak var adviceLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,6 +21,10 @@ class ResultsViewController: UIViewController {
     }
     
 
+    @IBAction func recalculatePressed(_ sender: UIButton) {
+    }
+    
+    
     /*
     // MARK: - Navigation
 
