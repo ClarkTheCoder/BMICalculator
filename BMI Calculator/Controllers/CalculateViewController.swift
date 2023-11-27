@@ -48,6 +48,7 @@ class CalculateViewController: UIViewController {
             // as! is used for forced downcasting (taking UIViewController and downcasting it to ResultsViewController
             let destinationVC = segue.destination as! ResultsViewController
             destinationVC.bmiValue = calculatorBrain.getBMIValue()
+            destinationVC.adviceValue = calculatorBrain.getAdviceValue()
         }
     }
     
