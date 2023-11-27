@@ -58,6 +58,8 @@ class CalculateViewController: UIViewController {
         self.performSegue(withIdentifier: "goToResult", sender: self)
     }
     
+    // This method is called just before a segue is performed, giving you an opportunity to configure
+    // the destination view controller.
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToResult" {
             // as! is used for forced downcasting (taking UIViewController and downcasting it to ResultsViewController
